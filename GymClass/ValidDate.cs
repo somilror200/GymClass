@@ -43,6 +43,7 @@ namespace GymClass
             {
                 this._month = 1;
                 this._year++;
+                return this;
             }
             if (this._day == DAYS_IN_MONTHS[this._month - 1])
             {
@@ -51,11 +52,13 @@ namespace GymClass
                 else
                     this._day = DAYS_IN_MONTHS[this._month];
                 this._month++;
+                return this;
             }
             else if (this._day > DAYS_IN_MONTHS[this._month])
             {
                 this._day = DAYS_IN_MONTHS[this._month];
                 this._month++;
+                return this;
             }
             else
                 this._month++;
